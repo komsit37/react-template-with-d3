@@ -3,11 +3,11 @@ var webpack = require('webpack');
 
 module.exports = {
     devtool: 'inline-source-map',
-    entry: './react/main.js',
+    entry: './react/router.js',
     output: { path: __dirname, filename: 'bundle.js' },
     module: {
         loaders: [
-            { test: /.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ }
+            { test: /.jsx?$/, loader: 'babel-loader', exclude: /node_modules/, query: {stage: 0} }
         ]
     }
 };
